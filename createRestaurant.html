@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><head>
+<meta charset="ISO-8859-1">
+<title>Insert Restaurant details</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+<body>
+<style>
+body {
+  background: url('https://www.shutterstock.com/image-illustration/3d-rendering-illustration-mockup-photo-260nw-2089793818.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+</style>
+<div class="container">
+		<div class="row">
+			<h1>Add new Restaurant</h1>
+		</div>
+
+<div class="card-body">
+			<form th:action = @{/insertRestaurants} th:object="${restaurantObject}" method = "post">
+				<div class="form-group">
+					<label> Restaurant Name: </label> <input type="text" name="restName"
+						th:field="*{restaurantName}" class="form-control"
+						placeholder="Enter Restaurant Name" />
+						
+						<label> Ratings: </label> 
+							<input type="text" name="ratings" 
+							th:field="*{rating}"
+						class="form-control" placeholder="Enter Restaurant Ratings" /> 
+						
+						<label>Average Price: </label> 
+						<input type="text" name="average cost"
+						th:field="*{averageCost}" class="form-control"
+						placeholder="Enter Average price" />
+				</div>
+		
+				<div class = "box-footer">
+				<button type = "submit" class = "btn btn-primary">
+				Add this Restaurant
+				</button>		
+			</div>
+			</form>
+		</div>
+	</div>	
+						
+						
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+<form th:action="@{/validatingData}" th:object=${adminObj}
+			method="get">
+			<!-- target="_blank" -->
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Sign in</th>
+					</tr>
+				</thead>
+				<tbody>
+			<style>
+body {
+  background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHwAugMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAABAgMEAAX/xAAcEAEAAwEBAQEBAAAAAAAAAAAAAQIREgNhURP/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIEAwX/xAAaEQEBAQEBAQEAAAAAAAAAAAAAERITAQMC/9oADAMBAAIRAxEAPwDfWh4ri1aG4dVcyHAxRfgYolIhweKLR5qV8ykZ4oMUaYoaKFIy/wAx/m08O4KRl4dw08O4KRm4Dhp4DgpGaaF4a+A4KkY5oE0a58yT5rSMk0LNGqaFmhUjLwW1GmahNSkZJoThrmheCrHoRU0UVih4o869IjFNPHmtWh4olIjXzPFFooaKlWI8O4X5DCkR4DhfkOSkR4dwtyHJSI8Bwvy7kpEOAmjRyE1KkZpoWaNfJZotIxzQs0a5oSaFSMdqEmjZaic0KkZZqHLRNC8lI9CKHiila/FK1eVe0Tih4opFTclInFXcq8u5KsS5dyryGFInyE1Ux0wUieBimO5KkTx2Hx2GiEwJhTHYUiXLuVeQ5KkRmpZovNQ5WpGW1E7UbLVStQpGSaBy0WqXkqR6FaqRUYg8Q8NOiFipoqaIHDRkmQEwpjsNLlPHYfHYaMpY7FOQw0ZTx2Hx2GkhMdh8dMGjJMdh8dhpITHTB8di6SJ8hNVcDDREZqS1WiYJappIy2oTlptUvJoy2RBoh0HiHNt05dA4MQbF2uSY7FMDDRkmOw+Ow0ZTwMUx2GjKXLuVMDDRlPl2KY7k0mU8dh+XYukyTHYfAw0mS46YNjsXRlOYLMKzBJNJlGYLislxNEaIPBYNEuPo68GhSCVPC7TA47BFdmS47DOw2ZJgTCmBMG1yTA5UwMNmU+XYfAmDaZJjsPgTBsyUJMWTZkrhkDaZCSSeSSdEwSQGQToYViTRKUWd2+f1duGiJUizLFzxdfPqnv4aNNEs8XNF2urHv5W0dS6d0vVMqa7U+nTY6kPoaToOjqsU0JlPsOzquVdCZT7+lm/1OphTSzKc+hZv9OrWFZks2Tm5ZudTCk2JNk5uE3TomD6HSU3Dv6nQwMegxf6xxaTdS+bv13c2v+n00en1i6k8WlOnqe/Nti5o9GGLyetpOvrHvzbou7tki0j1K9fWMNXbpuyzef0JvJ19MNM+gf1ZZvJZvP6vT1fPm1z6Fn0ZJvJZvK9PW/Pm1z6/S/1ZO5Duf1rfrXnza59A/oydT+h3Jr1rm1/1JPqyTeSTe361fUx42T7QSfZkm0lm8/rVTHjXPqH9frJ3P6Xu36X1nPj/2Q==') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+</style>
+					<tr>
+						<td>Email Address</td>
+						<td><input type="text" class="text" name="username"
+							th:field="*{UserName}" autofocus required /></td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" class="text" name="password"
+							th:field="*{Password}" required /></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2"><a href="/validatingData"> <input
+								type="submit" class="btn btn-success" value="Sign In" />
+						</a></td>
+
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+
+
+</body>
+</html>
