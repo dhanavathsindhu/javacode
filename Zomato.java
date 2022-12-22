@@ -1,64 +1,47 @@
-package com.edubridge.com.edubridge.Zomato;
+package com.example.frontend.demo.frontend.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Zomatotable")
 public class Zomato {
-	
-	private String restaurantName;
-	private int restaurantId;
-	private String deliveryMode;
-	private int averagePrice;
-	private int rating;
-	private String location;
-
-	public void setrestaurantName( String restaurantName) {
-		this. restaurantName= restaurantName;
-	}
-	public String getrestaurantName() {
-		return this.restaurantName;
-	}
-
-	public void setrestaurantId( int restaurantId) {
-		this.restaurantId= restaurantId;
-	}
-	public int getrestaurantId() {
-		return this.restaurantId;
-	}
-
-	public void setdeliveryMode( String deliveryMode) {
-		this.deliveryMode= deliveryMode;
-	}
-	public String getdeliveryMode() {
-		return this.deliveryMode;
-	}
-
-	public void setaveragePrice( int averagePrice) {
-		this.averagePrice= averagePrice;
-	}
-	public int getaveragePrice() {
-		return this.averagePrice;
-	}
-
-	public void setrating( int rating) {
-		this.rating= rating;
-	}
-	public int getrating() {
-		return this.rating;
-	}
-
-	public void setlocation( String location) {
-		this.location= location;
-	}
-	public String getlocation() {
-		return this.location;
-	}
-	
-
-
-
-
-
+@Column	
+private String restaurantName;
+@Column
+@Id
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+private int  restaurantId;
+@Column
+private int  rating;
+@Column
+private int averageCost;
+public int getAverageCost() {
+	return averageCost;
+}
+public void setAverageCost(int averageCost) {
+	this.averageCost = averageCost;
+}
+public String getRestaurantName() {
+	return restaurantName;
+}
+public void setRestaurantName(String restaurantName) {
+	this.restaurantName = restaurantName;
+}
+public int getRestaurantId() {
+	return restaurantId;
+}
+public void setRestaurantId(int restaurantId) {
+	this.restaurantId = restaurantId;
+}
+public int getRating() {
+	return rating;
+}
+public void setRating(int rating) {
+	this.rating = rating;
 }
 
-
-
-
-
+}
